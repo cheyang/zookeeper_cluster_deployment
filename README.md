@@ -1,4 +1,4 @@
-# zookeeper-cluster
+# zookeeper_cluster_deployment
 -------------------
 
 ## Deploy a zookeeper cluster(v3.4.6)
