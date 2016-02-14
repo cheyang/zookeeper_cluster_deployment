@@ -1,0 +1,27 @@
+zk1:
+  extends:
+    file: common.yml
+    service: zookeeper
+  volumes:
+    - /data/zk1:/tmp/zookeeper
+  environment:
+    - SERVER_ID=1
+    - ADDITIONAL_ZOOKEEPER_4=clientPort=2181
+zk2:
+  extends:
+    file: common.yml
+    service: zookeeper
+  volumes:
+    - /data/zk2:/tmp/zookeeper
+  environment:
+    - SERVER_ID=2
+    - ADDITIONAL_ZOOKEEPER_4=clientPort=2182
+zk3:
+  extends:
+    file: common.yml
+    service: zookeeper
+  volumes:
+    - /data/zk2:/tmp/zookeeper
+  environment:
+    - SERVER_ID=3
+    - ADDITIONAL_ZOOKEEPER_4=clientPort=2183  

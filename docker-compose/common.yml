@@ -1,0 +1,7 @@
+zookeeper:
+  image: garland/zookeeper
+  net: "host"
+  environment:
+    - ADDITIONAL_ZOOKEEPER_1=server.1=localhost:2888:3888
+    - ADDITIONAL_ZOOKEEPER_2=server.2=localhost:2889:3889
+    - ADDITIONAL_ZOOKEEPER_3=server.3=localhost:2890:3890
